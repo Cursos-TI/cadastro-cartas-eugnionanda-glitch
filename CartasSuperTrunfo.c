@@ -15,6 +15,14 @@ int main() {
     float pib1;
     int ptturis1;
 
+  //Variáveis segunda carta
+  char estado2;
+  char cod2 [3];
+  char nmcid2 [30];
+  int pop2;
+  float area1;
+  float pib2;
+  int ptturist2;
 
 
 
