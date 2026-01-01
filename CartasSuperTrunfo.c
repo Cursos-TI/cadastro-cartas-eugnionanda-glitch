@@ -6,6 +6,18 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+  // Variáveis primeira carta
+    char estado1;
+    char cod1[3];
+    char nmcid1 [30];
+    int pop1;
+    float area1;
+    float pib1;
+    int ptturis1;
+
+
+
+
 
   // Área para entrada de dados
 
