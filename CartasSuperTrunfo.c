@@ -27,7 +27,7 @@ int main() {
   // Área para entrada de dados
   // Dados primeira carta
   printf ("Carta 1: \n");
-  printf ("Estado: %s \n", estado1);
+  printf ("Estado: %d \n", estado1);
   printf ("Código: %s \n", cod1);
   printf ("Nome da Cidade: %s \n", nmcid1);
   printf ("População: %d \n", pop1);
@@ -37,15 +37,16 @@ int main() {
 
   // Dados segunda carta
   printf ("Carta 2: \n");
-  printf ("Estado: %s \n", estado2);
+  printf ("Estado: %d \n", estado2);
   printf ("Código: %s \n", cod2);
   printf ("Nome da Cidade: %s \n", nmcid2);
   printf ("População: %d \n", pop2);
   printf ("Área: %2.f km2 \n", area2);
   printf ("PIB: %2.f bilhões de reais \n", pib2);
   printf ("Número de pontos turísticos: %d \n", ptturist2);
-  
+
   // Área para exibição dos dados da cidade
+
 
 return 0;
 } 
