@@ -16,13 +16,13 @@ int main() {
     int ptturis1 = 15;
 
   //Variáveis segunda carta
-  char estado2;
-  char cod2 [3];
-  char nmcid2 [30];
-  int pop2;
-  float area1;
-  float pib2;
-  int ptturist2;
+  char estado2 = 'S';
+  char cod2 [3] = "S01";
+  char nmcid2 [30] = "PENHA";
+  int pop2 = 33663;
+  float area1 = 58.783;
+  float pib2 = 40.8;
+  int ptturist2 = 8;
 
   // Área para entrada de dados
 
