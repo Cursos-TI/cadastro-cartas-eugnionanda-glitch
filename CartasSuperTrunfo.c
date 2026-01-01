@@ -20,11 +20,22 @@ int main() {
   char cod2 [3] = "S01";
   char nmcid2 [30] = "PENHA";
   int pop2 = 33663;
-  float area1 = 58.783;
+  float area2 = 58.783;
   float pib2 = 40.8;
   int ptturist2 = 8;
 
   // Área para entrada de dados
+  // Dados primeira carta
+  printf ("Carta 1: \n");
+  printf ("Estado: %s \n", estado1);
+  printf ("Código: %s \n", cod1);
+  printf ("Nome da Cidade: %s \n", nmcid1);
+  printf ("População: %d \n", pop1);
+  printf ("Área: %2.f km2 \n", area1);
+  printf ("PIB: %2.f bilhões de reais \n", pib1);
+  printf ("Número de pontos turísticos: %d \n", ptturis1);
+
+  // Dados segunda carta
 
   // Área para exibição dos dados da cidade
 
