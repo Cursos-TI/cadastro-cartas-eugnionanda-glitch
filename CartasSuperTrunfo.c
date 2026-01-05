@@ -7,22 +7,22 @@
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
   // Variáveis primeira carta
-    char estado1 = 'M';
-    char cod1[3] = "M01";
-    char nmcid1[30] = "UBERLANDIA";
-    int pop1 = 761835;
-    float area1 = 4.115;
-    float pib1 = 51.2;
-    int ptturis1 = 15;
+    char estado1;
+    char cod1[3];
+    char nmcid1[30];
+    int pop1;
+    float area1;
+    float pib1;
+    int ptturis1;
 
   //Variáveis segunda carta
-  char estado2 = 'S';
-  char cod2 [3] = "S01";
-  char nmcid2 [30] = "PENHA";
-  int pop2 = 33663;
-  float area2 = 58.783;
-  float pib2 = 40.8;
-  int ptturist2 = 8;
+  char estado2;
+  char cod2 [3];
+  char nmcid2 [30];
+  int pop2;
+  float area2;
+  float pib2;
+  int ptturist2;
 
   // Área para entrada de dados
   // Dados primeira carta
@@ -36,7 +36,7 @@ int main() {
   printf ("Número de pontos turísticos: %d \n", ptturis1);
 
   // Dados segunda carta
-  printf ("Carta 2: \n");
+  printf ("\nCarta 2: \n");
   printf ("Estado: %d \n", estado2);
   printf ("Código: %s \n", cod2);
   printf ("Nome da Cidade: %s \n", nmcid2);
