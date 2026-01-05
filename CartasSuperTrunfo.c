@@ -13,7 +13,7 @@ int main() {
     int pop1;
     float area1;
     float pib1;
-    int ptturis1;
+    int ptturist1;
 
   //Variáveis segunda carta
   char estado2;
@@ -33,7 +33,7 @@ int main() {
   printf ("População: %d \n", pop1);
   printf ("Área: %2.f km2 \n", area1);
   printf ("PIB: %2.f bilhões de reais \n", pib1);
-  printf ("Número de pontos turísticos: %d \n", ptturis1);
+  printf ("Número de pontos turísticos: %d \n", ptturist1);
 
   // Dados segunda carta
   printf ("\nCarta 2: \n");
@@ -46,6 +46,13 @@ int main() {
   printf ("Número de pontos turísticos: %d \n", ptturist2);
 
   // Área para exibição dos dados da cidade
+  scanf ("Digite o nome do Estado: %s", &estado1);
+  scanf ("Informe código do Estado: %s", &cod1);
+  scanf("Digite o nome da cidade: %s", &nmcid1);
+  scanf ("Informe a quantidade de habitantes da cidade: %d", pop1);
+  scanf("Qual é a área, em km2, da cidade: %2.f", area1);
+  scanf ("Informe o PIB da cidade: %2.f", pib1);
+  scanf("Quantos pontos turísticos a cidade possui: %d", ptturist1);
 
 
 return 0;
