@@ -1,74 +1,82 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
-
 int main() {
-  // Área para definição das variáveis para armazenar as propriedades das cidades
-  // Variáveis primeira carta
-    char estado1 [3];
-    char cod1[4];
+
+    // Variáveis primeira carta
+    char estado1[2];
+    char cod1[3];
     char nmcid1[30];
     int pop1;
     float area1;
     float pib1;
     int ptturist1;
 
-  //Variáveis segunda carta
-  char estado2 [3];
-  char cod2 [4];
-  char nmcid2 [30];
-  int pop2;
-  float area2;
-  float pib2;
-  int ptturist2;
+    // Variáveis segunda carta
+    char estado2[2];
+    char cod2[3];
+    char nmcid2[30];
+    int pop2;
+    float area2;
+    float pib2;
+    int ptturist2;
 
-  // Área para entrada de dados
-  printf ("Estado da primeira carta: ");
-  scanf("%d", estado1);
+    // ============================
+    //      ENTRADA DE DADOS
+    // ============================
 
-  printf ("Estado da segunda carta: ");
-  scanf("%d", estado2);
+    printf("=== PRIMEIRA CARTA ===\n");
+    printf("Estado: ");
+    scanf("%s", estado1);
 
-  printf ("Código da primeira carta: ");
-  scanf ("%s", cod1);
+    printf("Código: ");
+    scanf("%s", cod1);
 
-  printf ("Código da segunda carta: ");
-  scanf ("%s", cod2); 
+    printf("Nome da cidade: ");
+    scanf("%s", nmcid1);
 
-  printf ("Nome cidade da primeira carta: ");
-  scanf("%s", nmcid1);
+    printf("População: ");
+    scanf("%d", &pop1);
 
-  printf ("Nome cidade da segunda carta: ");
-  scanf("%s", nmcid2);
+    printf("Área: ");
+    scanf("%f", &area1);
 
-  printf ("População primeira carta: ");
-  scanf ("%2.f",&pop1);
+    printf("PIB: ");
+    scanf("%f", &pib1);
 
-  printf ("População segunda carta: ");
-  scanf ("%2.f", pop2);
+    printf("Pontos turísticos: ");
+    scanf("%d", &ptturist1);
 
-  printf ("Área primeira carta: ");
-  scanf("%2.f", &area1);
 
-  printf ("Área segunda carta: ");
-  scanf("%2.f", &area2);
-  
-  printf ("PIB primeira carta: ");
-  scanf ("%2.f", &pib1);
+    printf("\n=== SEGUNDA CARTA ===\n");
+    printf("Estado: ");
+    scanf("%s", estado2);
 
-  printf ("PIB segunda carta: ");
-  scanf ("%2.f", &pib2);
+    printf("Código: ");
+    scanf("%s", cod2);
 
-  printf ("Pontos turísticos primeira carta: ");
-  scanf("%d", &ptturist1);
+    printf("Nome da cidade: ");
+    scanf("%s", nmcid2);
 
-  printf ("Pontos turísticos segunda carta: ");
-  scanf("%d", &ptturist2); 
+    printf("População: ");
+    scanf("%d", &pop2);
 
- // Área para exibição dos dados da cidade
-    printf("\n--- CARTA 1 ---\n");
+    printf("Área: ");
+    scanf("%f", &area2);
+
+    printf("PIB: ");
+    scanf("%f", &pib2);
+
+    printf("Pontos turísticos: ");
+    scanf("%d", &ptturist2);
+
+
+    // ============================
+    //      SAÍDA DE DADOS
+    // ============================
+
+    printf("\n\n===== DADOS CADASTRADOS =====\n");
+
+    printf("\n--- PRIMEIRA CARTA ---\n");
     printf("Estado: %s\n", estado1);
     printf("Código: %s\n", cod1);
     printf("Cidade: %s\n", nmcid1);
@@ -77,7 +85,7 @@ int main() {
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", ptturist1);
 
-    printf("\n--- CARTA 2 ---\n");
+    printf("\n--- SEGUNDA CARTA ---\n");
     printf("Estado: %s\n", estado2);
     printf("Código: %s\n", cod2);
     printf("Cidade: %s\n", nmcid2);
@@ -85,5 +93,6 @@ int main() {
     printf("Área: %.2f\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", ptturist2);
-return 0;
-} 
+
+    return 0;
+}
