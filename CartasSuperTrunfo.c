@@ -115,5 +115,27 @@ int main() {
     printf("PIB per Capita: R$ %.2f\n", pibpc2);
     printf("Super Poder: %f\n", superPoder2);
 
+    // ============================
+    //      COMPARAÇÃO CARTAS
+    // ============================
+    printf ("\n\n---COMPARAÇÃO DAS CARTAS---\n");
+    printf ("\n\n---PRIMEIRA CARTA---\n");
+    printf("População venceu (1)? %d\n", pop1 > pop2);
+    printf("Área venceu (1)? %d\n", area1 > area2);
+    printf("PIB venceu (1)? %d\n", pib1 > pib2);
+    printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist1 > ptturist2);
+    printf("Densidade Populacional venceu (1): %d\n", densidade1 < densidade2);
+    printf("PIB per Capita venceu (1)? %d\n", pibpc1 > pibpc2);
+    printf("Super Poder venceu (1)? %d\n", superPoder1 > superPoder2);
+
+    printf ("\n\n---SEGUNDA CARTA---\n");
+    printf("População venceu (1)? %d\n", pop2 > pop1);
+    printf("Área venceu (1)? %d\n", area2 > area1);
+    printf("PIB venceu (1)? %d\n", pib2 > pib1);
+    printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist2 > ptturist1);
+    printf("Densidade Populacional venceu (1): %d\n", densidade2 < densidade1);
+    printf("PIB per Capita venceu (1)? %d\n", pibpc2 > pibpc1);
+    printf("Super Poder venceu (1)? %d\n", superPoder2 > superPoder1);
+
     return 0;
 }
