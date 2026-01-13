@@ -5,8 +5,8 @@ int main() {
     // ============================
     //      VARIÁVEIS CARTA 1
     // ============================
-    char estado1[2];
-    char cod1[3];
+    char estado1[3];
+    char cod1[4];
     char nmcid1[30];
     unsigned long int pop1;
     float area1;
@@ -16,8 +16,8 @@ int main() {
     // ============================
     //      VARIÁVEIS CARTA 2
     // ============================
-    char estado2[2];
-    char cod2[3];
+    char estado2[3];
+    char cod2[4];
     char nmcid2[30];
     unsigned long int pop2;
     float area2;
@@ -101,7 +101,7 @@ int main() {
     printf("Pontos turísticos: %d\n", ptturist1);
     printf("Densidade populacional: %.2fhab/km2\n", densidade1);
     printf("PIB per Capita: R$ %.2f\n", pibpc1);
-    printf("Super Poder: %f\n", superPoder1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     printf("\n--- SEGUNDA CARTA ---\n");
     printf("Estado: %s\n", estado2);
@@ -113,29 +113,39 @@ int main() {
     printf("Pontos turísticos: %d\n", ptturist2);
     printf("Densidade populacional: %.2fhab/km2\n", densidade2);
     printf("PIB per Capita: R$ %.2f\n", pibpc2);
-    printf("Super Poder: %f\n", superPoder2);
+    printf("Super Poder: %.2f\n", superPoder2);
 
     // ============================
-    //      COMPARAÇÃO CARTAS
+    //      COMPARAÇÃO CARTAS - semana2
     // ============================
-    printf ("\n\n---COMPARAÇÃO DAS CARTAS---\n");
-    printf ("\n\n---PRIMEIRA CARTA---\n");
-    printf("População venceu (1)? %d\n", pop1 > pop2);
-    printf("Área venceu (1)? %d\n", area1 > area2);
-    printf("PIB venceu (1)? %d\n", pib1 > pib2);
-    printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist1 > ptturist2);
-    printf("Densidade Populacional venceu (1): %d\n", densidade1 < densidade2);
-    printf("PIB per Capita venceu (1)? %d\n", pibpc1 > pibpc2);
-    printf("Super Poder venceu (1)? %d\n", superPoder1 > superPoder2);
+    //printf ("\n\n---COMPARAÇÃO DAS CARTAS---\n");
+    //printf ("\n\n---PRIMEIRA CARTA---\n");
+    //printf("População venceu (1)? %d\n", pop1 > pop2);
+    //printf("Área venceu (1)? %d\n", area1 > area2);
+    //printf("PIB venceu (1)? %d\n", pib1 > pib2);
+    //printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist1 > ptturist2);
+    //printf("Densidade Populacional venceu (1): %d\n", densidade1 < densidade2);
+    //printf("PIB per Capita venceu (1)? %d\n", pibpc1 > pibpc2);
+    //printf("Super Poder venceu (1)? %d\n", superPoder1 > superPoder2);
+    //printf ("\n\n---SEGUNDA CARTA---\n");
+    //printf("População venceu (1)? %d\n", pop2 > pop1);
+    //printf("Área venceu (1)? %d\n", area2 > area1);
+    //printf("PIB venceu (1)? %d\n", pib2 > pib1);
+    //printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist2 > ptturist1);
+    //printf("Densidade Populacional venceu (1): %d\n", densidade2 < densidade1);
+    //printf("PIB per Capita venceu (1)? %d\n", pibpc2 > pibpc1);
+    //printf("Super Poder venceu (1)? %d\n", superPoder2 > superPoder1);
 
-    printf ("\n\n---SEGUNDA CARTA---\n");
-    printf("População venceu (1)? %d\n", pop2 > pop1);
-    printf("Área venceu (1)? %d\n", area2 > area1);
-    printf("PIB venceu (1)? %d\n", pib2 > pib1);
-    printf("Qtde Pontos Turísticos venceu (1)? %d\n", ptturist2 > ptturist1);
-    printf("Densidade Populacional venceu (1): %d\n", densidade2 < densidade1);
-    printf("PIB per Capita venceu (1)? %d\n", pibpc2 > pibpc1);
-    printf("Super Poder venceu (1)? %d\n", superPoder2 > superPoder1);
+    // ============================
+    //      COMPARAÇÃO CARTAS - semana3
+    // ============================
+        printf("RESULTADO DA RODADA\n");
+        printf("Atributo: Super Poder\n");
 
+    if (superPoder1 > superPoder2){
+        printf("A vencedora é a Carta 1! Valor do Super Poder: %.2f\n", superPoder1);
+    } else {
+        printf("A vencedora é a Carta 2! Valor do Super Poder: %.2f\n", superPoder2);
+    }
     return 0;
 }
