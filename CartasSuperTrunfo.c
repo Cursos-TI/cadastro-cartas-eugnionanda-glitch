@@ -107,6 +107,11 @@ int main() {
     // MENU INTERATIVO - nível aventureiro 3ª semana
         printf("### JOGO SUPER TRUNFO ###\n\n");
         printf("Escolha uma das opções abaixo\n");
+        printf("1 - Iniciar Jogo\n");
+        printf("2 - Regras do Jogo\n");
+        printf("3 - Encerrar sessão\n");
+
+    
         
     
     //      COMPARAÇÃO CARTAS - semana3
