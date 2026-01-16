@@ -1,43 +1,4 @@
-#include <stdio.h>
 
-char* atributoEscolhido(int subOpcaoMenu) {
-    switch (subOpcaoMenu) {
-        case 1: return "População";
-        case 2: return "Área";
-        case 3: return "PIB";
-        case 4: return "Pontos Turísticos";
-        case 5: return "Densidade Demográfica";
-        case 6: return "PIB per Capita";
-        case 7: return "Super Poder";
-        default: return "Atributo Inválido";
-    }
-}
-
-int main() {
-
-    // CARTA 1 - inicializadas no nível aventureiro da 3ª semana //
-        char estado1[] = "MG";
-        char cod1[] = "MG01";
-        char nmcid1[] = "UBERABA";
-        unsigned long int pop1 = 356781;
-        float area1 = 4523957;
-        float pib1 = 59943;
-        int ptturist1 = 18;
-        float densidade1 = pop1 / area1;
-        float pibpc1 = (pib1 * 1000000000) / pop1;
-        float superPoder1 = (float)pop1 + area1 + pib1 + (float) ptturist1 + pibpc1 + (1 / densidade1);
-    
-   // CARTA 2 - inicializadas no nível aventureiro da 3ª semana //
-        char estado2[3] = "MG";
-        char cod2[4] = "MG02";
-        char nmcid2[30] = "IPATINGA";
-        unsigned long int pop2 = 227731;
-        float area2 = 164884;
-        float pib2 = 17609176;
-        int ptturist2 = 15;
-        float densidade2 = pop2 / area2;
-        float pibpc2 = (pib2 * 1000000000) / pop2;
-        float superPoder2 = (float)pop2 + area2 + pib2 + (float) ptturist2 + pibpc2 + (1 / densidade2);
     
     // ENTRADA DE DADOS - comentado a partir do nível aventureiro da 3ª semana visto que as variáveis foram inicializadas
     //printf("=== PRIMEIRA CARTA ===\n");
@@ -116,100 +77,122 @@ int main() {
     //printf("Super Poder venceu (1)? %d\n", superPoder2 > superPoder1);
 
     // MENU INTERATIVO - nível aventureiro 3ª semana
+#include <stdio.h>
 
-            int opcaoMenu;
-            int subOpcaoMenu;
-            float valor1, valor2;
+// CARTA 1
+char estado1[3] = "MG";
+char cod1[5] = "MG01";
+char nmcid1[30] = "UBERABA";
+unsigned long int pop1 = 356781;
+float area1 = 4523957;
+float pib1 = 59943;
+int ptturist1 = 18;
+float densidade1;
+float pibpc1;
+float superPoder1;
 
-        printf("### JOGO SUPER TRUNFO ###\n\n");
-        printf("Regras do Jogo:\n");
-                printf("Cada jogador escolhe uma carta e seleciona um atributo para comparar.\n");
-                printf("A carta com o maior valor no atributo selecionado vence a rodada. Exceto o atributo DENSIDADE DEMOGRÁFICA, que terá como vencedor o menor valor entre as cartas.\n\n");
-        printf("Escolha uma das opções abaixo\n");
-        printf("1 - Iniciar Jogo\n");
-        printf("2 - Encerrar sessão\n");
-        printf("Digite a opção escolhida: ");
-        scanf("%d", &opcaoMenu);
-        printf("\n");
-       
-        switch (opcaoMenu) {
-            case 1:
-                printf("Iniciando o jogo...\n\n");
-                printf("Escolha um dos atributos abaixo\n\n");
-                printf("1 - População\n");
-                printf("2 - Área\n");
-                printf("3 - PIB\n");
-                printf("4 - Pontos Turísticos\n");
-                printf("5 - Densidade Demográfica\n");
-                printf("6 - PIB per Capita\n");
-                printf("7 - Super Poder\n");
-                printf("Digite o número correspondente ao atributo escolhido: ");
-                scanf("%d", &subOpcaoMenu);
-                printf("Atributo escolhido: %s\n\n", atributoEscolhido(subOpcaoMenu));
-                break;
-            case 2:
-                printf("Encerrando sessão. Até a próxima!\n");
-                return 0;
-            default:
-                printf("Opção inválida. Encerrando sessão.\n");
-                return 0;
+// CARTA 2
+char estado2[3] = "MG";
+char cod2[5] = "MG02";
+char nmcid2[30] = "IPATINGA";
+unsigned long int pop2 = 227731;
+float area2 = 164884;
+float pib2 = 17609176;
+int ptturist2 = 15;
+float densidade2;
+float pibpc2;
+float superPoder2;
+
+// Função auxiliar para pegar o valor de um atributo de uma carta
+float getValor(int atributo, int carta) {
+    if (carta == 1) {
+        switch (atributo) {
+            case 1: return pop1;
+            case 2: return area1;
+            case 3: return pib1;
+            case 4: return ptturist1;
+            case 5: return densidade1;
+            case 6: return pibpc1;
+            case 7: return superPoder1;
+            default: return 0;
         }
-        switch (subOpcaoMenu)
-        {
-        case 1:
-            valor1 = pop1 ; valor2 = pop2;
-        case 2:
-            valor1 = area1 ; valor2 = area2;
-        case 3:
-            valor1 = pib1 ; valor2 = pib2;
-        case 4:
-            valor1 = ptturist1 ; valor2 = ptturist2;
-        case 5:
-            valor1 = densidade1 ; valor2 = densidade2;
-        case 6:
-            valor1 = pibpc1 ; valor2 = pibpc2;
-        case 7:
-            valor1 = superPoder1 ; valor2 = superPoder2;
-            break;
-        }
-
-        // COMPARAÇÃO CARTAS - semana3
-        printf("RESULTADO DA RODADA\n");
-        printf("---------------------\n");
-        
-    if (
-        (subOpcaoMenu == 1 && pop1 > pop2) ||
-        (subOpcaoMenu == 2 && area1 > area2) ||
-        (subOpcaoMenu == 3 && pib1 > pib2) ||
-        (subOpcaoMenu == 4 && ptturist1 > ptturist2) ||
-        (subOpcaoMenu == 5 && densidade1 < densidade2) ||
-        (subOpcaoMenu == 6 && pibpc1 > pibpc2) ||
-        (subOpcaoMenu == 7 && superPoder1 > superPoder2)
-    ) {
-        printf("Resultado: Carta 1 VENCEU!\n");
-        printf("Carta 1: %s - %s - %s\n", estado1, cod1, nmcid1);
-        printf("Atributo: %s - Valor: %.2f\n\n", atributoEscolhido(subOpcaoMenu), valor1);
-        printf("Carta 2: %s - %s - %s\n", estado2, cod2, nmcid2);
-        printf("Atributo: %s — Valor: %.2f\n\n", atributoEscolhido(subOpcaoMenu), valor2);
-
-    } else if (
-        (subOpcaoMenu == 1 && pop2 > pop1) ||
-        (subOpcaoMenu == 2 && area2 > area1) ||
-        (subOpcaoMenu == 3 && pib2 > pib1) ||
-        (subOpcaoMenu == 4 && ptturist2 > ptturist1) ||
-        (subOpcaoMenu == 5 && densidade2 < densidade1) ||
-        (subOpcaoMenu == 6 && pibpc2 > pibpc1) ||
-        (subOpcaoMenu == 7 && superPoder2 > superPoder1)
-    ) {
-        printf("Resultado: Carta 2 VENCEU!\n");
-        printf("Carta 2: %s - %s - %s\n", estado2, cod2, nmcid2);
-        printf("Atributo: %s — Valor: %.2f\n\n", atributoEscolhido(subOpcaoMenu), valor2);
-        printf("Carta 1: %s - %s - %s\n", estado1, cod1, nmcid1);
-        printf("Atributo: %s — Valor: %.2f\n\n", atributoEscolhido(subOpcaoMenu), valor1);
-
     } else {
-        printf("Resultado: EMPATE!\n");
-        printf("Atributo: %s — Valor Carta 1: %.2f\n", atributoEscolhido(subOpcaoMenu), valor1);
-        printf("Atributo: %s — Valor Carta 2: %.2f\n", atributoEscolhido(subOpcaoMenu), valor2);
+        switch (atributo) {
+            case 1: return pop2;
+            case 2: return area2;
+            case 3: return pib2;
+            case 4: return ptturist2;
+            case 5: return densidade2;
+            case 6: return pibpc2;
+            case 7: return superPoder2;
+            default: return 0;
+        }
     }
+}
+
+int main() {
+
+    // Calcula derivados das cartas
+    densidade1 = (float)pop1 / area1;
+    pibpc1 = (pib1 * 1000000000.0f) / pop1;
+    superPoder1 = pop1 + area1 + pib1 + ptturist1 + pibpc1 + (1.0f / densidade1);
+
+    densidade2 = (float)pop2 / area2;
+    pibpc2 = (pib2 * 1000000000.0f) / pop2;
+    superPoder2 = pop2 + area2 + pib2 + ptturist2 + pibpc2 + (1.0f / densidade2);
+
+    int opcaoMenu, cartaEscolhida;
+    int subMenu1, subMenu2;
+    float valor1, valor2;
+
+    printf("### JOGO SUPER TRUNFO ###\n\n");
+    printf("1 - Iniciar Jogo\n");
+    printf("2 - Encerrar sessão\n");
+    printf("Escolha: ");
+    scanf("%d", &opcaoMenu);
+
+    if (opcaoMenu == 2) {
+        printf("Encerrando sessão...\n");
+        return 0;
+    }
+
+    printf("\nEscolha a carta (1 ou 2): ");
+    scanf("%d", &cartaEscolhida);
+
+    printf("\nEscolha o primeiro atributo:\n");
+    printf("1 - População\n2 - Área\n3 - PIB\n4 - Pontos Turísticos\n5 - Densidade Demográfica\n6 - PIB per Capita\n7 - Super Poder\n");
+    scanf("%d", &subMenu1);
+
+    printf("\nEscolha o segundo atributo (diferente do primeiro): ");
+    scanf("%d", &subMenu2);
+
+    if (subMenu1 == subMenu2) {
+        printf("Erro: atributos iguais. Reinicie o jogo.\n");
+        return 0;
+    }
+
+    // Soma da carta escolhida
+    valor1 = getValor(subMenu1, cartaEscolhida);
+    valor2 = getValor(subMenu2, cartaEscolhida);
+    float somaCartaEscolhida = valor1 + valor2;
+
+    // Soma da outra carta
+    int outraCarta = (cartaEscolhida == 1) ? 2 : 1;
+    float somaOutraCarta = getValor(subMenu1, outraCarta) + getValor(subMenu2, outraCarta);
+
+    printf("\nRESULTADO DA RODADA\n");
+    printf("---------------------\n");
+
+    if (somaCartaEscolhida > somaOutraCarta) {
+        printf("Carta %d VENCEU!\n", cartaEscolhida);
+    } else if (somaCartaEscolhida < somaOutraCarta) {
+        printf("Carta %d VENCEU!\n", outraCarta);
+    } else {
+        printf("EMPATE!\n");
+    }
+
+    printf("\nSoma Carta %d: %.2f\n", cartaEscolhida, somaCartaEscolhida);
+    printf("Soma Carta %d: %.2f\n", outraCarta, somaOutraCarta);
+
+    return 0;
 }
